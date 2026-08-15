@@ -1,0 +1,7 @@
+trial,variant,pre_pass,heal_status,approved,post_pass,mttr_seconds,notes
+1,class_rename,,,,,,
+2,nested,,,,,,
+3,attribute_rename,,,,,,
+4,text_noise,,,,,,
+5,reorder,,,,,,
+6,hard_semantic,,,,,,

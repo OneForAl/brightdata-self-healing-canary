@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: self-healing-canary
+    runtime: docker
+    plan: free
+    dockerfilePath: ./canary_site/Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: CANARY_ADMIN_TOKEN
+        sync: false

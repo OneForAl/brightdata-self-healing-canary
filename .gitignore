@@ -1,0 +1,5 @@
+.env
+outputs/*.json
+outputs/*.html
+__pycache__/
+.venv/
