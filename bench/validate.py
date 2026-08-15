@@ -2,9 +2,9 @@ import json, sys
 from pathlib import Path
 
 EXPECTED = [
- {'id':'p-101','name':'Nebula Keyboard','price':2499,'currency':'INR','category':'Keyboards','rating':4.6,'in_stock':True},
- {'id':'p-102','name':'Orbit Mouse','price':1499,'currency':'INR','category':'Mice','rating':4.3,'in_stock':True},
- {'id':'p-103','name':'Quasar Headset','price':3299,'currency':'INR','category':'Audio','rating':4.5,'in_stock':False},
+ {'id':'p-101','name':'Nebula Keyboard','price':2499,'currency':'INR','category':'Keyboards','rating':4.6,'in_stock':True,"product_page_url": "https://brightdata-self-healing-canary.vercel.app/", "input": {"url": "https://brightdata-self-healing-canary.vercel.app/"}},
+ {'id':'p-102','name':'Orbit Mouse','price':1499,'currency':'INR','category':'Mice','rating':4.3,'in_stock':True,"product_page_url": "https://brightdata-self-healing-canary.vercel.app/", "input": {"url": "https://brightdata-self-healing-canary.vercel.app/"}},
+ {'id':'p-103','name':'Quasar Headset','price':3299,'currency':'INR','category':'Audio','rating':4.5,'in_stock':False,"product_page_url": "https://brightdata-self-healing-canary.vercel.app/", "input": {"url": "https://brightdata-self-healing-canary.vercel.app/"}},
 ]
 REQUIRED = set(EXPECTED[0])
 
