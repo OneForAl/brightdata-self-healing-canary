@@ -8,12 +8,14 @@ Goal: maintain the scraper so it returns exactly 3 catalog products with these s
 - category
 - rating
 - in_stock (boolean)
+- product_page_url: CANARY_URL,
+- input: {"url": CANARY_URL}
 
 Workflow:
-1. Run the existing scraper against CANARY_URL using `brightdata scraper run COLLECTOR_ID CANARY_URL --pretty -o outputs/run.json`.
+1. Run the existing scraper against CANARY_URL using `brightdata scraper run $COLLECTOR_ID $CANARY_URL --pretty -o outputs/run.json`.
 2. Run `python bench/validate.py outputs/run.json`.
-3. If validation fails, inspect the canary page with `brightdata scrape CANARY_URL -f html -o outputs/page.html`.
-4. Call `brightdata scraper heal COLLECTOR_ID` with a precise description of what changed and what the correct schema is. Include `--url CANARY_URL`.
+3. If validation fails, inspect the canary page with `brightdata scrape $CANARY_URL -f html -o outputs/page.html`.
+4. Call `brightdata scraper heal $COLLECTOR_ID` with a precise description of what changed and what the correct schema is. Include `--url $CANARY_URL`.
 5. Prefer the approval-gate mode first. Review `preview_result` and only approve when it satisfies all semantic fields.
 6. After approval, rerun the scraper and validator.
 7. Record the iteration: variant, validation result before heal, heal status, whether approval was needed, result after heal, and elapsed wall-clock time.
