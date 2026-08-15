@@ -1,0 +1,1 @@
+export CANARY_URL="https://brightdata-self-healing-canary.vercel.app/"
